@@ -61,7 +61,7 @@ const MovieCard = ({ movie }) => {
                 onClick={handleThumbnailClick}
                 className="btn btn-primary trailer-btn"
               >
-                🎬 Watch Trailer
+              Watch
               </button>
             ) : (
               <Link to={`/movie/${movie.id}`} className="btn btn-primary">
@@ -77,9 +77,9 @@ const MovieCard = ({ movie }) => {
                 {isLoading ? (
                   <span className="spinner spinner-sm"></span>
                 ) : isInWatchlist(movie.id) ? (
-                  'Remove from Watchlist'
+                  '❌Watchlist'
                 ) : (
-                  'Add to Watchlist'
+                  ' ➕Watchlist'
                 )}
               </button>
             )}
